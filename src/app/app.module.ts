@@ -9,6 +9,10 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { BronzesComponent } from './bronzes/bronzes.component';
 import { GoldsComponent } from './golds/golds.component';
+import {BronzeService} from "./bronzes/bronze.service";
+import {GoldService} from "./golds/gold.service";
+import {HttpClientModule} from "@angular/common/http";
+import {ToastrModule} from "ngx-toastr";
 
 @NgModule({
   declarations: [
@@ -26,9 +30,14 @@ import { GoldsComponent } from './golds/golds.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    HttpClientModule,
+    ToastrModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    BronzeService,
+    GoldService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
