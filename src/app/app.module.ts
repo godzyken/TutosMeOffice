@@ -9,17 +9,25 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { BronzesComponent } from './bronzes/bronzes.component';
 import { GoldsComponent } from './golds/golds.component';
-import {BronzeService} from "./bronzes/bronze.service";
-import {GoldService} from "./golds/gold.service";
-import {HttpClientModule} from "@angular/common/http";
-import {ToastrModule} from "ngx-toastr";
+import { BronzeService } from "./bronzes/bronze.service";
+import { GoldService } from "./golds/gold.service";
+import { HttpClientModule } from "@angular/common/http";
+import { ToastrModule } from "ngx-toastr";
+import { AjoutBronzeComponent } from './ajout-bronze/ajout-bronze.component';
+import { AjoutGoldComponent } from './ajout-gold/ajout-gold.component';
+import {FormsModule} from "@angular/forms";
+import {ConfirmationPopoverModule} from "angular-confirmation-popover";
+import { SheetjsComponent } from './sheetjs/sheetjs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     BronzesComponent,
-    GoldsComponent
+    GoldsComponent,
+    AjoutBronzeComponent,
+    AjoutGoldComponent,
+    SheetjsComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +40,11 @@ import {ToastrModule} from "ngx-toastr";
     MatIconModule,
     MatListModule,
     HttpClientModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    FormsModule,
+    ConfirmationPopoverModule.forRoot({
+      confirmButtonType: 'danger'
+    })
   ],
   providers: [
     BronzeService,
