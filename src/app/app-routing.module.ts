@@ -9,10 +9,10 @@ import {AjoutListGoldComponent} from "./ajout-list-gold/ajout-list-gold.componen
 import {AjoutListBronzeComponent} from "./ajout-list-bronze/ajout-list-bronze.component";
 
 const routes: Routes = [
-  {path: 'bronze', component: BronzesComponent},
+  {path: 'bronzes', component: BronzesComponent},
   {path: 'ajout-bronze', component: AjoutBronzeComponent},
   {path: 'ajout-list-bronze', component: AjoutListBronzeComponent},
-  {path: 'gold', component: GoldsComponent},
+  {path: 'golds', component: GoldsComponent},
   {path: 'ajout-gold', component: AjoutGoldComponent},
   {path: 'ajout-list-gold', component: AjoutListGoldComponent},
   {path: 'sheetjs', component: SheetjsComponent}
