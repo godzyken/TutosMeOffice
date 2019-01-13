@@ -18,6 +18,9 @@ import { AjoutGoldComponent } from './ajout-gold/ajout-gold.component';
 import {FormsModule} from "@angular/forms";
 import {ConfirmationPopoverModule} from "angular-confirmation-popover";
 import { SheetjsComponent } from './sheetjs/sheetjs.component';
+import {ExcelService} from "./services/excel.service";
+import { AjoutListBronzeComponent } from './ajout-list-bronze/ajout-list-bronze.component';
+import { AjoutListGoldComponent } from './ajout-list-gold/ajout-list-gold.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,9 @@ import { SheetjsComponent } from './sheetjs/sheetjs.component';
     GoldsComponent,
     AjoutBronzeComponent,
     AjoutGoldComponent,
-    SheetjsComponent
+    SheetjsComponent,
+    AjoutListBronzeComponent,
+    AjoutListGoldComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +53,8 @@ import { SheetjsComponent } from './sheetjs/sheetjs.component';
   ],
   providers: [
     BronzeService,
-    GoldService
+    GoldService,
+    ExcelService
   ],
   bootstrap: [AppComponent]
 })
