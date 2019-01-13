@@ -1,0 +1,128 @@
+<p>
+  ajout-bronze works!
+</p>
+<div class="form-horizontal pad-10">
+  <br>
+  <form #ajoutBronzeForm="ngForm">
+    <div class="col-md-6 form-group">
+      <label class=" control-label">Email du Membre Bronze</label>
+      <div class="col-md-12 no-padding">
+        <input name="email" id="email" #libelle="ngModel" [(ngModel)]="bronzes.email" class="form-control" placeholder="" type="text" required />
+        <div *ngIf="email.errors && (email.dirty || email.touched)" class="alert alert-danger">
+          <div [hidden]="!email.errors.required">
+            L' email est requis!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 form-group">
+      <label class=" control-label">Nom Membre Bronze</label>
+      <div class="col-md-12 no-padding">
+        <input name="nom" id="nom" #libelle="ngModel" [(ngModel)]="bronzes.nom" class="form-control" placeholder="" type="text" required />
+        <div *ngIf="nom.errors && (nom.dirty || nom.touched)" class="alert alert-danger">
+          <div [hidden]="!nom.errors.required">
+            Le nom est requis!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 form-group">
+      <label class=" control-label">Prenom Membre Bronze</label>
+      <div class="col-md-12 no-padding">
+        <input name="prenom" id="prenom" #libelle="ngModel" [(ngModel)]="bronzes.prenom" class="form-control" placeholder="" type="text" required />
+        <div *ngIf="prenom.errors && (prenom.dirty || prenom.touched)" class="alert alert-danger">
+          <div [hidden]="!prenom.errors.required">
+            Le prenom est requis!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 form-group">
+      <label class=" control-label">Address Membre Bronze</label>
+      <div class="col-md-12 no-padding">
+        <input name="address" id="address" #libelle="ngModel" [(ngModel)]="bronzes.address" class="form-control" placeholder="" type="text" required />
+        <div *ngIf="address.errors && (address.dirty || address.touched)" class="alert alert-danger">
+          <div [hidden]="!address.errors.required">
+            L' address est requis!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 form-group">
+      <label class=" control-label">Code Postal Membre Bronze</label>
+      <div class="col-md-12 no-padding">
+        <input name="code_postal" id="code_postal" #libelle="ngModel" [(ngModel)]="bronzes.code_postal" class="form-control" placeholder="" type="text" required />
+        <div *ngIf="code_postal.errors && (code_postal.dirty || code_postal.touched)" class="alert alert-danger">
+          <div [hidden]="!code_postal.errors.required">
+            Le code postale est requis!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 form-group">
+      <label class=" control-label">Ville Membre Bronze</label>
+      <div class="col-md-12 no-padding">
+        <input name="ville" id="ville" #libelle="ngModel" [(ngModel)]="bronzes.ville" class="form-control" placeholder="" type="text" required />
+        <div *ngIf="ville.errors && (ville.dirty || ville.touched)" class="alert alert-danger">
+          <div [hidden]="!ville.errors.required">
+            La ville est requis!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 form-group">
+      <label class=" control-label">mobile Membre Bronze</label>
+      <div class="col-md-12 no-padding">
+        <input name="numero_telephone" id="numero_telephone" #libelle="ngModel" [(ngModel)]="bronzes.numero_telephone" class="form-control" placeholder="" type="text" required />
+        <div *ngIf="numero_telephone.errors && (numero_telephone.dirty || numero_telephone.touched)" class="alert alert-danger">
+          <div [hidden]="!numero_telephone.errors.required">
+            Le numero de telephone est requis!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 form-group">
+      <label class=" control-label">mon CV Membre Bronze</label>
+      <div class="col-md-12 no-padding">
+        <input name="monCV" id="monCV" #libelle="ngModel" [(ngModel)]="bronzes.monCV" class="form-control" placeholder="" type="text" required />
+        <div *ngIf="monCV.errors && (monCV.dirty || monCV.touched)" class="alert alert-danger">
+          <div [hidden]="!monCV.errors.required">
+            Le cv est requis!
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-6 form-group">
+      <label class=" control-label">Matières</label>
+      <div class="col-md-12 no-padding">
+        <input name="matieres" id="matieres" #coefficient="ngModel" [(ngModel)]="bronzes.matieres" class="form-control" placeholder="" type="number" required />
+        <div *ngIf="matieres.errors && (matieres.dirty || matieres.touched)" class="alert alert-danger">
+          <div [hidden]="!matieres.errors.required">
+            Une matiere est requis!
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="pad-10">
+      <button mwlConfirmationPopover
+              [popoverTitle]="'Confirmation'"
+              [popoverMessage]="'êtes-vous sûr?'"
+              placement="top"
+              (confirm)="createBronze(bronzes)"
+              type="submit" class="btn btn-save btn-primary" [disabled]="!ajoutBronzeForm.valid">
+        <span class="glyphicon glyphicon-floppy-disk"></span> Sauvegarder
+      </button>
+    </div>
+  </form>
+</div>

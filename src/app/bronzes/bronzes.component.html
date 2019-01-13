@@ -1,0 +1,48 @@
+<p>
+  bronzes works!
+</p>
+
+
+<div class="row">
+  <div class="col-md-12 pad-10">
+    <button type="submit" class="btn btn-primary" (click)="goToAddBronze()">
+      <span class="glyphicon glyphicon-floppy-disk"></span> Ajouter un Membre
+    </button>
+  </div>
+  <div class="col-md pad-10">
+    <button type="submit" class="btn btn-primary" (click)="goToAddListBronze()">
+      <span class="glyphicon glyphicon-floppy-disk"></span> Ajouter une liste de Membre
+    </button>
+  </div>
+
+</div>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>email</th>
+    <th>nom</th>
+    <th>prenom</th>
+    <th>adresse</th>
+    <th>code postale</th>
+    <th>ville</th>
+    <th>numéro de telephone</th>
+    <th>mon CV</th>
+    <th>matières</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let bronze of bronzes ">
+    <td>{{ bronze.email }}</td>
+    <td>{{ bronze.nom }}</td>
+    <td>{{ bronze.prenom }}</td>
+    <td>{{ bronze.address }}</td>
+    <td>{{ bronze.code_postal }}</td>
+    <td>{{ bronze.ville }}</td>
+    <td>{{ bronze.numero_telephone }}</td>
+    <td>{{ bronze.monCV }}</td>
+    <td>{{ bronze.matieres }}</td>
+  </tr>
+  </tbody>
+</table>

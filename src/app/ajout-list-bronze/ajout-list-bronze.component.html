@@ -1,0 +1,36 @@
+<p>
+  ajout-list-bronze works!
+</p>
+<div class="form-horizontal pad-10">
+  <br>
+  <form #ajoutBronzeForm="ngForm">
+    <div class="col-md-6 form-group">
+      <label class=" control-label">Ajouter une liste de membre bronze</label>
+      <div class="col-md-12 no-padding">
+        <input type="file" (change)="onFileChange($event)" multiple="false" />
+        <table class="sjs-table">
+          <tr *ngFor="let row of data">
+            <td *ngFor="let val of row">
+              {{val}}
+            </td>
+          </tr>
+        </table>
+        <button (click)="export()">Export!</button>
+      </div>
+    </div>
+
+
+
+<!--    <div class="pad-10">
+      <button mwlConfirmationPopover
+              [popoverTitle]="'Confirmation'"
+              [popoverMessage]="'êtes-vous sûr?'"
+              placement="top"
+              (confirm)="createBronze(bronzes)"
+              type="submit" class="btn btn-save btn-primary" [disabled]="!ajoutBronzeForm.valid">
+        <span class="glyphicon glyphicon-floppy-disk"></span> Sauvegarder
+      </button>
+    </div>-->
+  </form>
+</div>
+

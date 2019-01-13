@@ -1,0 +1,42 @@
+<p>
+  golds works!
+</p>
+
+
+<div class="row">
+  <div class="col-md-12 pad-10">
+    <button type="submit" class="btn btn-primary" (click)="goToAddGold()">
+      <span class="glyphicon glyphicon-floppy-disk"></span> Ajout Membre Gold
+    </button>
+  </div>
+</div>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>email</th>
+    <th>nom</th>
+    <th>prenom</th>
+    <th>adresse</th>
+    <th>code postale</th>
+    <th>ville</th>
+    <th>numéro de telephone</th>
+    <th>mon CV</th>
+    <th>matières</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let gold of golds ">
+    <td>{{ gold.email }}</td>
+    <td>{{ gold.nom }}</td>
+    <td>{{ gold.prenom }}</td>
+    <td>{{ gold.address }}</td>
+    <td>{{ gold.code_postal }}</td>
+    <td>{{ gold.ville }}</td>
+    <td>{{ gold.numero_telephone }}</td>
+    <td>{{ gold.monCV }}</td>
+    <td>{{ gold.matieres }}</td>
+  </tr>
+  </tbody>
+</table>
